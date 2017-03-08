@@ -21,7 +21,7 @@ function convertToRoman(num) {
     return numberToString.toString().split('');
   };
   // This function get the an numeric array and complete each number with the decimals values
-  function breakingNumbersIntoDecimal(arrNumbers) {
+  function breakingNumbers(arrNumbers) {
     var arr = splitNumbers(arrNumbers);
     var length = arr.length;
     var decimalArray = [];
@@ -30,42 +30,45 @@ function convertToRoman(num) {
     }
     return decimalArray;
   }
-  function inRoman(value) {
+    var arr = breakingNumbers(num)
+    var newArray = [];
+    for (var i = 0; i < arr.length; i++) {
+      var value = arr[i]
+
     if (value >= 1000) {
-      return romanSymbols['1000'];
+      newArray.push(romanSymbols['1000']);
     } else if(value >= 900){
-      return romanSymbols['900'];
+        newArray.push(romanSymbols['900']);
     } else if(value >= 500){
-      return romanSymbols['500'];
+        newArray.push(romanSymbols['500']);
     } else if(value >= 400){
-      return romanSymbols['400'];
+        newArray.push(romanSymbols['400']);
     } else if(value >= 100){
-      return romanSymbols['100']
+        newArray.push(romanSymbols['100']);
     } else if (value >= 90) {
-      return romanSymbols['90'];
+        newArray.push(romanSymbols['90']);
     } else if (value >= 50) {
-      return romanSymbols['50'];
+        newArray.push(romanSymbols['50']);
     } else if (value >= 40){
-      return romanSymbols['40'];
+        newArray.push(romanSymbols['40']);
     } else if (value >= 10){
-      return romanSymbols['10'];
+      newArray.push(romanSymbols['10']);
     } else if (value == 9){
-      return romanSymbols['9'];
+        newArray.push(romanSymbols['9']);
     } else if (value >= 5 && value <= 8) {
-      return romanSymbols['5'] + romanSymbols['1'];
+        newArray.push(romanSymbols['5']);
     } else if (value == 4) {
-      return romanSymbols['4'];
+        newArray.push(romanSymbols['4']);
     } else if (value >= 1 && value <= 3) {
-      return romanSymbols['1'];
+        newArray.push(romanSymbols['1']);
     } else {
-      return null;
+        null;
     }
-  }
-  var romanArray = breakingNumbersIntoDecimal(num).filter(inRoman);
-  console.log(romanArray);
+}
+console.log(newArray.join('') + ", " + arr);
 }
 
-convertToRoman(36);
+convertToRoman(36); //XXXVI
 convertToRoman(2); //"II"
 convertToRoman(3); //"III"
 convertToRoman(4); //"IV"
