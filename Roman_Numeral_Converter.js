@@ -52,7 +52,10 @@ function convertToRoman(num) {
     } else if (value >= 40){
         newArray.push(romanSymbols['40']);
     } else if (value >= 10){
-      newArray.push(romanSymbols['10']);
+      while (value >= 10) {
+        newArray.push(romanSymbols['10']);
+        value -= 10;
+      }
     } else if (value == 9){
         newArray.push(romanSymbols['9']);
     } else if (value >= 5 && value <= 8) {
@@ -60,6 +63,10 @@ function convertToRoman(num) {
     } else if (value == 4) {
         newArray.push(romanSymbols['4']);
     } else if (value >= 1 && value <= 3) {
+      while (value >= 1) {
+        newArray.push(romanSymbols['10']);
+        value -= 10;
+      }
         newArray.push(romanSymbols['1']);
     } else {
         null;
