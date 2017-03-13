@@ -64,7 +64,7 @@ function convertToRoman(num) {
         newArray.push(romanSymbols['4']);
     } else if (value >= 1 && value <= 3) {
       while (value >= 1) {
-        newArray.push(romanSymbols['10']);
+        newArray.push(romanSymbols['1']);
         value -= 10;
       }
         newArray.push(romanSymbols['1']);
