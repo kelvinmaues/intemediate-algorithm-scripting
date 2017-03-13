@@ -36,11 +36,18 @@ function convertToRoman(num) {
       var value = arr[i]
 
     if (value >= 1000) {
-      newArray.push(romanSymbols['1000']);
+      while (value >= 1000) {
+        newArray.push(romanSymbols['1000']);
+        value -= 1000;
+      }
     } else if(value >= 900){
         newArray.push(romanSymbols['900']);
     } else if(value >= 500){
         newArray.push(romanSymbols['500']);
+        while (value > 500) {
+          newArray.push(romanSymbols['100']);
+          value -= 100;
+        }
     } else if(value >= 400){
         newArray.push(romanSymbols['400']);
     } else if(value >= 100){
@@ -49,6 +56,10 @@ function convertToRoman(num) {
         newArray.push(romanSymbols['90']);
     } else if (value >= 50) {
         newArray.push(romanSymbols['50']);
+        while (value > 50) {
+          newArray.push(romanSymbols['10']);
+          value -= 10;
+        }
     } else if (value >= 40){
         newArray.push(romanSymbols['40']);
     } else if (value >= 10){
@@ -59,15 +70,18 @@ function convertToRoman(num) {
     } else if (value == 9){
         newArray.push(romanSymbols['9']);
     } else if (value >= 5 && value <= 8) {
-        newArray.push(romanSymbols['5']);
+      newArray.push(romanSymbols['5']);
+      while (value > 5) {
+        newArray.push(romanSymbols['1']);
+        value -= 1;
+      }
     } else if (value == 4) {
         newArray.push(romanSymbols['4']);
     } else if (value >= 1 && value <= 3) {
       while (value >= 1) {
         newArray.push(romanSymbols['1']);
-        value -= 10;
+        value -= 1;
       }
-        newArray.push(romanSymbols['1']);
     } else {
         null;
     }
@@ -75,6 +89,8 @@ function convertToRoman(num) {
 console.log(newArray.join('') + ", " + arr);
 }
 
+convertToRoman(2014) // "MMXIV"
+convertToRoman(3999) // "MMMCMXCIX"
 convertToRoman(36); //XXXVI
 convertToRoman(2); //"II"
 convertToRoman(3); //"III"
@@ -88,6 +104,6 @@ convertToRoman(44); // "XLIV"
 convertToRoman(45); //"XLV"
 convertToRoman(68); //"LXVIII"
 convertToRoman(83); //"LXXXIII"
-convertToRoman(500);
-convertToRoman(649);
+convertToRoman(500); //D
+convertToRoman(649); //DCXLIX
 convertToRoman(1000);
