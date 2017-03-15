@@ -1,17 +1,14 @@
 function whatIsInAName(collection, source) {
-
   var arr = [];
   for (var i = 0; i < collection.length; i++) {
-    for (var nameKey in source) {
-        if (collection[i].hasOwnProperty(nameKey)) {
-          for (var collectionKey in collection[i]) {
-          if (collection[i][collectionKey] == source[nameKey]){
-                arr.push(collection[i]);
+      for (var collectionKey in collection[i]) {
+        for (var nameKey in source) {
+          if (collection[i][collectionKey] == source[nameKey]) {
+              arr.push(collection[i]);
           }
         }
       }
     }
-  }
   console.log(arr)
   return arr
 }
