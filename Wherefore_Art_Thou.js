@@ -1,18 +1,15 @@
 function whatIsInAName(collection, source) {
-  var arr = [];
-  for (var i = 0; i < collection.length; i++) {
-    for (var nameKey in source) {
-      for (var collectionKey in collection[i]) {
-        if (collection[i].hasOwnProperty(nameKey)) {
-          if (collection[i][collectionKey] == source[nameKey]) {
-            arr.push(collection[i]);
-          }
-        }
-      }
+// using the filter method to iterate trough the object array and filter the values
+// that pass in the test
+return collection.filter(function (obj) {
+  // loop for source object
+  for (var nameKey in source) {
+    if (!obj.hasOwnProperty(nameKey) || obj[nameKey] !== source[nameKey]) {
+      return false;
     }
   }
-  console.log(arr);
-  return arr
+  return true;
+});
 }
 
 whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" });
