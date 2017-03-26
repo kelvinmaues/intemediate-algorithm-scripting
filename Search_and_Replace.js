@@ -1,13 +1,14 @@
 function myReplace(str, before, after) {
-  var newStr = str.replace(before, after);
-
-  function styleHyphenFormat(propertyName) {
-  function upperToHyphenLower(match, offset, string) {
-    return (offset ? '-' : '') + match.toLowerCase();
-  }
-  return propertyName.replace(/[A-Z]/g, upperToHyphenLower);
-}
-
+  // Step 1 takes the before word and sees if it is a case word
+  // If is true, it will change the after first letter word
+  // If else, it'll return the same after word to be replaced at the string sentence
+  var newStr = str.replace(before, function() {
+    if(before[0] === before[0].toUpperCase()){
+      return after.replace(after[0], after[0].toUpperCase());
+    }else{
+      return after;
+    }
+  });
   console.log(newStr);
   return newStr;
 }
