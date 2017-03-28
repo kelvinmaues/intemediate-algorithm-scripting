@@ -7,7 +7,9 @@ else if the first letter is a vowel
   ->it adds at the word of the "way"
 */
 function translatePigLatin(str) {
-  return str.substr(1) + str.substring(0, 1) + "ay";
+  var strArray = str.split('');
+  var vowels = ['a', 'e', 'i', 'o', 'u'];
+  console.log(str.substr(1) + str.substring(0, 1) + "ay");
 }
 
 translatePigLatin("consonant");
