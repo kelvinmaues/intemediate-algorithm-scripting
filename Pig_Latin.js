@@ -1,15 +1,13 @@
-/*
-if the first letter is a consonant
-  ->it takes the first and add at the end of the word + 'ay'
-else if the first and in the sequence letters are consonants too
-  .->it takes all the consonants from the beggining and add at end + 'ay'
-else if the first letter is a vowel
-  ->it adds at the word of the "way"
-*/
 function translatePigLatin(str) {
-  var strArray = str.split('');
-  var vowels = ['a', 'e', 'i', 'o', 'u'];
-  console.log(str.substr(1) + str.substring(0, 1) + "ay");
+  function isVowel(x) {  return /[aeiouAEIOU]/.test(x); }
+  for (var i = 0; i < str.length; i++) {
+    if (isVowel(str[i]) && i === 0) {
+      return str.substr(i) + str.substring(0, i) + "way";
+    }
+    else if(isVowel(str[i])){
+      return str.substr(i) + str.substring(0, i) + "ay";
+    }
+  }
 }
 
 translatePigLatin("consonant");
