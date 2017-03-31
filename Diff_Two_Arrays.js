@@ -1,3 +1,4 @@
+// Coded by Kelvin Maues
 function diffArray(arr1, arr2) {
    var arr = []; // a new array to get the difference between the arrays
 
@@ -41,7 +42,7 @@ function diffArray(arr1, arr2) {
   return console.log(arr);
 
 }
-
+// TDD Callback functions
 //[4]
 diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]);
 // ["pink wool"]

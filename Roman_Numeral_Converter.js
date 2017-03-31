@@ -1,3 +1,4 @@
+// Coded by Kelvin Maues
 // Convert the given number into a roman numeral.
 // Try it Array.prototype.filter()
 function convertToRoman(num) {
@@ -88,7 +89,7 @@ function convertToRoman(num) {
 }
 console.log(newArray.join('') + ", " + arr);
 }
-
+// TDD Callback functions
 convertToRoman(2014) // "MMXIV"
 convertToRoman(3999) // "MMMCMXCIX"
 convertToRoman(36); //XXXVI

@@ -1,3 +1,4 @@
+// Coded by Kelvin Maues
 function myReplace(str, before, after) {
   // Step 1 takes the before word and sees if it is a case word
   // If is true, it will change the after first letter word
@@ -12,7 +13,7 @@ function myReplace(str, before, after) {
   console.log(newStr);
   return newStr;
 }
-
+// TDD Callback functions
 myReplace("A quick brown fox jumped over the lazy dog", "jumped", "leaped");
 myReplace("Let us go to the store", "store", "mall"); // "Let us go to the mall".
 myReplace("He is Sleeping on the couch", "Sleeping", "sitting") // "He is Sitting on the couch".

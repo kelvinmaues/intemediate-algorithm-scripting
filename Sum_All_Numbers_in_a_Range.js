@@ -1,3 +1,4 @@
+// Coded by Kelvin Maues
 function sumAll(arr) {
   var maxValue = Math.max.apply(null, arr); // get the minimum value in an array
   var minValue = Math.min.apply(null, arr); // get the maximum value in an array
@@ -9,7 +10,7 @@ function sumAll(arr) {
   }
   return sum;
 }
-
+// TDD Callback functions
 sumAll([1, 4]); //10
 sumAll([4, 1]); //10
 sumAll([5, 10]); //45
