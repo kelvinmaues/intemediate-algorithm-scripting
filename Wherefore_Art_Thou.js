@@ -1,4 +1,5 @@
 // Coded by Kelvin Maues
+// freeCodeCamp.com
 function whatIsInAName(collection, source) {
 // using the filter method to iterate trough the object array and filter the values
 // that pass in the test

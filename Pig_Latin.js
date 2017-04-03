@@ -1,4 +1,5 @@
 // Coded by Kelvin Maues
+// freeCodeCamp.com
 function translatePigLatin(str) {
   // function to check is the consonant is a vowel or not
   function isVowel(x) {  return /[aeiouAEIOU]/.test(x); }

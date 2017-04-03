@@ -1,4 +1,5 @@
 // Coded by Kelvin Maues
+// freeCodeCamp.com
 function myReplace(str, before, after) {
   // Step 1 takes the before word and sees if it is a case word
   // If is true, it will change the after first letter word

@@ -1,4 +1,5 @@
 // Coded by Kelvin Maues
+// freeCodeCamp.com
 function diffArray(arr1, arr2) {
    var arr = []; // a new array to get the difference between the arrays
 
