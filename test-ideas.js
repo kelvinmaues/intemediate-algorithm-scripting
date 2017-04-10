@@ -1,20 +1,5 @@
-var strs = "A"
-switch (strs) {
-  case "A":
-    arr.push(strs + "T");
-    console.log(arr);
-    return arr;
-    break;
-  case "T":
-    arr.push(strs + "A");
-    return arr;
-    break;
-  case "C":
-    arr.push(strs + "G");
-    return arr;
-    break;
-  case "G":
-    arr.push(strs + "C");
-    return arr;
-    break;
-}
+var sum = [0, 1, 2, 3].reduce(function(acc, val) {
+  return acc + val;
+}, 0);
+// sum is 6
+console.log(sum)
